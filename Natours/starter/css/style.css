@@ -451,3 +451,11 @@ body {
   position: relative;
   padding: 15rem 0;
   background-color: transparent; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #55c57a, #28b485); }
+
+.book {
+  background-image: url(../img/nat-10.jpg);
+  background-size: cover; }
