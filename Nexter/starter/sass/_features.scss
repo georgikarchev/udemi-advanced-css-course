@@ -1,0 +1,11 @@
+.features {
+    grid-column: center-start / center-end;
+    //grid-column: 2 / 3;
+
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 6rem;
+    //grid-template-rows: auto auto; // this line is NOT needed - it will automatically be set by the browser - Implicid grid
+}
