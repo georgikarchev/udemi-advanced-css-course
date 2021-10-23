@@ -10,6 +10,10 @@
     grid-row-gap: 2rem;
     row-gap: 2rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: full-start / full-end;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: min-content max-content;
@@ -17,6 +21,15 @@
         grid-row-gap: 4vh;
         row-gap: 4vw;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: min-content max-content;
+            padding: 1rem;
+        }
     }
 
     &__img {

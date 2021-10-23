@@ -4,20 +4,33 @@
 
     margin: 15rem 0;
 
-    display: grid;
-    //grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));// make grid break into two by 3 on smaller screens 
-    grid-gap: 6rem;
-    //grid-template-rows: auto auto; // this line is NOT needed - it will automatically be set by the browser - Implicid grid
-    align-items: start; // !!! important line  !!! - this line makes it so that all features' texts are aligned even if they have only 3 lines of text rather than 4
+    @supports(display: grid) {
+        display: grid;
+        //grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));// make grid break into two by 3 on smaller screens 
+        grid-gap: 6rem;
+        //grid-template-rows: auto auto; // this line is NOT needed - it will automatically be set by the browser - Implicid grid
+        align-items: start; // !!! important line  !!! - this line makes it so that all features' texts are aligned even if they have only 3 lines of text rather than 4
+    }
 }
 
 // reusable piece of code, which is independant of the features section
 .feature {
+    float: left;
+    width: 33.33%;
+    margin-bottom: 6rem;
+
+    @supports(display: grid) {
+        width: auto;
+        margin-bottom: 0;
+    }
+
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-row-gap: 1.5rem;
-    grid-column-gap: 2.5rem; 
+    row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+    column-gap: 2.5rem; 
 
 
     &__icon {
